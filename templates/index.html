@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+               "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <script type="text/javascript" src="static/jquery-1.7.1.js"></script>
+  <script type="text/javascript" src="static/main.js"></script>
+  <link type="text/css" rel="stylesheet" href="static/basic.css">
+  <title>PyViz</title>
+<body>
+  <h1>PyViz</h1>
+  <textarea id='code'>
+primes = []
+for n in range(2, 100):
+  for p in primes:
+     if n % p == 0: break
+  else:
+     primes.append(n)
+
+print primes
+  </textarea>
+  <table border id='bytecode'>
+
+  </table>
+</body>
+  
