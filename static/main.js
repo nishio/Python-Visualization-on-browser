@@ -29,6 +29,12 @@ $(function(){
 
     function update_bytecode(data){
         if(data == null) return;
+        if(data['error'] != null){
+            $('#error').text(data['error']);
+            return;
+        }else{
+            $('#error').text('');
+        }
         $('#bytecode').empty();
         $('#bytecode').append($('<colgroup span="3"></colgroup><colgroup span=5 style="background-color:#eee;"></colgroup>'));
         $('#bytecode').append($('<tr><th>line</th><th>opname</th><th>argument</th><th colspan=5>debug info</th></tr>'));

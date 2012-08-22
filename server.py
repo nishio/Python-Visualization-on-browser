@@ -21,8 +21,8 @@ def to_bytecode():
     callback = request.args['callback']
     try:
         ret = core.to_bytecode(code)
-    except:
-        ret = 'null'
+    except Exception, e:
+        ret = json.dumps({'error': str(e)})
 
     return "%s(%s)" % (callback, ret)
 
