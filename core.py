@@ -61,6 +61,7 @@ def disassemble(co):
     return json.dumps(lines)
 
 def to_bytecode(code):
+    code = ("#-*- encoding: utf-8 -*-\n" + code).encode('utf-8')
     return disassemble(compiler.compile(code, "<string>", "exec"))
 
 def to_ast(code):
