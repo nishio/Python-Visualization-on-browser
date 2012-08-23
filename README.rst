@@ -18,3 +18,4 @@ TODO
 - Show status such as 'compile error'.
 - Link opname to document of those instruction http://docs.python.org/library/dis.html
 - Show tables of constant and name.
+- Show syntax tree and abstract syntax tree? Should I split projects?
